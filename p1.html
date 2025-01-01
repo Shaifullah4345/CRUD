@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen 1</title>
+    <style>
+      form {
+        margin: auto;
+        width: 400px;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      action="p1-process.php"
+      method="POST"
+      data-onsubmit="return registration_form_validation()"
+    >
+      <h2>Registration Form:</h2>
+      <label>Name *</label><br />
+      <input type="text" placeholder="Name" name="name" id="full_name" /><br />
+      <span id="name_error"></span><br />
+      <label>Phone *</label><br />
+      <input
+        type="tel"
+        placeholder="Phone"
+        name="phone_number"
+        id="phone_number"
+      /><br />
+      <span id="phone_error"></span><br />
+      <label>Email *</label><br />
+      <input
+        type="email"
+        placeholder="Email"
+        name="email_address"
+        id="email_address"
+      /><br />
+      <span id="email_error"></span><br />
+      <label>FB profile *</label><br />
+      <input
+        type="text"
+        placeholder="FB profile"
+        name="fb_profile"
+        id="fb_profile"
+      /><br />
+      <span id="fb_error"></span><br />
+      <label>Message</label><br />
+      <textarea placeholder="Message" name="message" id="message"></textarea
+      ><br />
+      <label>Password *</label><br />
+      <input
+        type="password"
+        placeholder="Password"
+        name="password"
+        id="password"
+      /><br />
+      <span id="password_error"></span><br />
+      <input type="submit" value="Sign UP" name="registration_submit" />
+    </form>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
